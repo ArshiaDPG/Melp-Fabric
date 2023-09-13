@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableProvider;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.util.Identifier;
@@ -21,8 +22,7 @@ public class MelpBlockLootTableProvider extends SimpleFabricLootTableProvider {
 
     @Override
     public void accept(BiConsumer<Identifier, LootTable.Builder> biConsumer) {
-        biConsumer.accept(MBlocks.MELP.getLootTableId(), LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(MBlocks.MELP)).build()));
-        biConsumer.accept(MBlocks.MELP_NECK.getLootTableId(), LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(MBlocks.MELP_NECK)).build()));
+        biConsumer.accept(MBlocks.MELP.getLootTableId(), LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(MItems.MELP_SEED).conditionally(RandomChanceLootCondition.builder(0.7f))).build()));
         biConsumer.accept(MBlocks.MELP_CROP.getLootTableId(), LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(MItems.MELP_SEED)).build()));
     }
 }

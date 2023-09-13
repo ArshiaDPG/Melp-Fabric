@@ -36,7 +36,7 @@ public class MBlocks {
     public static final Block MELP = createBlockWithItem("melp", new MelpBlock(AbstractBlock.Settings.copy(Blocks.KELP)
             .mapColor(DyeColor.ORANGE).sounds(BlockSoundGroup.SCULK_VEIN)));
     public static final Block MELP_NECK = createBlockWithoutItem("melp_neck", new MelpNeckBlock(AbstractBlock.Settings.copy(Blocks.KELP_PLANT)
-            .mapColor(DyeColor.ORANGE).sounds(BlockSoundGroup.SCULK_VEIN)));
+            .mapColor(DyeColor.ORANGE).sounds(BlockSoundGroup.SCULK_VEIN).dropsLike(MELP)));
     public static final Block MELP_CROP = createBlockWithoutItem("melp_crop", new MelpCropBlock(
             AbstractBlock.Settings.copy(Blocks.TORCHFLOWER_CROP)
             .mapColor(state -> state.get(MelpCropBlock.AGE) < MelpCropBlock.MAX_AGE ? MapColor.GREEN : MapColor.ORANGE)

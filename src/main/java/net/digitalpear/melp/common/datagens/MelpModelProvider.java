@@ -3,7 +3,6 @@ package net.digitalpear.melp.common.datagens;
 import net.digitalpear.melp.common.blocks.MelpCropBlock;
 import net.digitalpear.melp.common.blocks.MelpNeckBlock;
 import net.digitalpear.melp.init.MBlocks;
-import net.digitalpear.melp.init.MItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
@@ -45,7 +44,6 @@ public class MelpModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-//        itemModelGenerator.register(MItems.MELP_SEED, Models.GENERATED);
 
     }
 }

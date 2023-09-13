@@ -22,6 +22,7 @@ public class MelpBlock extends AbstractPlantStemBlock {
     private static final double GROW_PER_TICK_PROBABILITY = 0.14;
     public MelpBlock(Settings settings) {
         super(settings, Direction.UP, SHAPE, true, GROW_PER_TICK_PROBABILITY);
+        setDefaultState(this.getDefaultState().with(FLOWERING, false));
     }
 
     @Override
