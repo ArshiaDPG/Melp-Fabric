@@ -22,7 +22,7 @@ public class MelpBlockLootTableProvider extends SimpleFabricLootTableProvider {
 
     @Override
     public void accept(BiConsumer<Identifier, LootTable.Builder> biConsumer) {
-        biConsumer.accept(MBlocks.MELP.getLootTableId(), LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(MItems.MELP_SEED).conditionally(RandomChanceLootCondition.builder(0.7f))).build()));
+        biConsumer.accept(MBlocks.MELP.getLootTableId(), LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(MBlocks.MELP)).build()));
         biConsumer.accept(MBlocks.MELP_CROP.getLootTableId(), LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(MItems.MELP_SEED)).build()));
     }
 }

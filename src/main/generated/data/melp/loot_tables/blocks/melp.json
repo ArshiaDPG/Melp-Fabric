@@ -6,13 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "conditions": [
-            {
-              "chance": 0.7,
-              "condition": "minecraft:random_chance"
-            }
-          ],
-          "name": "melp:melp_seed"
+          "name": "melp:melp"
         }
       ],
       "rolls": 1.0
