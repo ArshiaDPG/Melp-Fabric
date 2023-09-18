@@ -4,12 +4,8 @@ import net.digitalpear.melp.init.MBlocks;
 import net.digitalpear.melp.init.MItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
-import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTables;
-import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.function.SetCountLootFunction;
-import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 
 public class Melp implements ModInitializer {
 
@@ -24,9 +20,9 @@ public class Melp implements ModInitializer {
                 if (id == LootTables.SNIFFER_DIGGING_GAMEPLAY){
                     tableBuilder.modifyPools(builder -> builder.with(ItemEntry.builder(MItems.MELP_SEED)));
                 }
-                else if (id == LootTables.END_CITY_TREASURE_CHEST){
-                    tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(MItems.MELP_SEED).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f))).conditionally(RandomChanceLootCondition.builder(0.3f))).build());
-                }
+//                else if (id == LootTables.END_CITY_TREASURE_CHEST){
+//                    tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(MItems.MELP_SEED).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f))).conditionally(RandomChanceLootCondition.builder(0.3f))).build());
+//                }
             }
         });
     }
