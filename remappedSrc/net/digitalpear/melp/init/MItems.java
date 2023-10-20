@@ -25,9 +25,6 @@ public class MItems {
             entries.addAfter(Items.PITCHER_POD, MELP_SEED);
             entries.addAfter(Items.PITCHER_PLANT, MBlocks.MELP);
         });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(MBlocks.DRIED_MELP);
-        });
 
         CompostingChanceRegistry.INSTANCE.add(MBlocks.MELP, 0.6f);
         CompostingChanceRegistry.INSTANCE.add(MItems.MELP_SEED, 0.3f);

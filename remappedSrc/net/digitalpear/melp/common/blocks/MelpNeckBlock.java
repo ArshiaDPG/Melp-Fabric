@@ -1,7 +1,6 @@
 package net.digitalpear.melp.common.blocks;
 
 import net.digitalpear.melp.init.MBlocks;
-import net.digitalpear.melp.init.MItems;
 import net.minecraft.block.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
@@ -48,10 +47,12 @@ public class MelpNeckBlock extends AbstractPlantBlock {
 
             ItemEntity itemEntity = EntityType.ITEM.create(world);
             itemEntity.setPos(pos.getX() + 0.5f, pos.getY() + 0.5f, pos.getZ() + 0.5f);
-            itemEntity.setStack(MItems.MELP_SEED.getDefaultStack());
+            itemEntity.setStack(Items.PINK_TULIP.getDefaultStack());
             world.playSound(player, pos, SoundEvents.BLOCK_GROWING_PLANT_CROP, SoundCategory.BLOCKS, 1.0F, 0.5F);
             world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, state.with(FLOWERING, false)));
-            itemEntity.setVelocity(itemEntity.getVelocity().add((world.random.nextFloat() - world.random.nextFloat()) * 0.1F, world.random.nextFloat() * 0.05F, (world.random.nextFloat() - world.random.nextFloat()) * 0.1F));
+            if (itemEntity != null) {
+                itemEntity.setVelocity(itemEntity.getVelocity().add((world.random.nextFloat() - world.random.nextFloat()) * 0.1F, world.random.nextFloat() * 0.05F, (world.random.nextFloat() - world.random.nextFloat()) * 0.1F));
+            }
             world.spawnEntity(itemEntity);
         }
         return super.onUse(state, world, pos, player, hand, hit);

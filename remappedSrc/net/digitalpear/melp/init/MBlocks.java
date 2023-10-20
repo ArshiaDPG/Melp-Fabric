@@ -42,7 +42,7 @@ public class MBlocks {
     ));
 
     public static final Block DRIED_MELP = createBlockWithItem("dried_melp", new DriedMelpBlock(AbstractBlock.Settings.copy(MELP).sounds(BlockSoundGroup.BONE).mapColor(Blocks.BONE_BLOCK.getDefaultMapColor())));
-    public static final Block POTTED_DRIED_MELP = createBlockWithoutItem("potted_dried_melp", new FlowerPotBlock(DRIED_MELP, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
+    public static final Block POTTED_DRIED_MELP = createBlockWithItem("potted_dried_melp", new FlowerPotBlock(DRIED_MELP, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
 
     public static void init(){
 

@@ -32,6 +32,7 @@ public class MelpModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.excludeFromSimpleItemModelGeneration(MBlocks.MELP);
         createMelpPlantBlock(blockStateModelGenerator, MBlocks.MELP);
         blockStateModelGenerator.registerItemModel(MBlocks.MELP);
 

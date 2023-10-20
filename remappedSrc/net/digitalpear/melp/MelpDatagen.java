@@ -3,7 +3,6 @@ package net.digitalpear.melp;
 import net.digitalpear.melp.common.datagens.MelpBlockLootTableProvider;
 import net.digitalpear.melp.common.datagens.MelpLanguageProvider;
 import net.digitalpear.melp.common.datagens.MelpModelProvider;
-import net.digitalpear.melp.common.datagens.MelpRecipeProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -14,7 +13,6 @@ public class MelpDatagen implements DataGeneratorEntrypoint {
 
         pack.addProvider(MelpModelProvider::new);
         pack.addProvider(MelpBlockLootTableProvider::new);
-        pack.addProvider(MelpRecipeProvider::new);
         pack.addProvider(MelpLanguageProvider::new);
     }
 }

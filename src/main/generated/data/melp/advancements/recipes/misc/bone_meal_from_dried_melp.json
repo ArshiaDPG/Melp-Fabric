@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dried_melp": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "melp:dried_melp"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bone_meal_from_dried_melp"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dried_melp"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bone_meal_from_dried_melp"
+    ]
+  },
+  "sends_telemetry_event": false
+}

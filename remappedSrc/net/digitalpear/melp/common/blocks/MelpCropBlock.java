@@ -7,7 +7,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
@@ -42,15 +41,6 @@ public class MelpCropBlock extends CropBlock {
         return SHAPE_BY_AGE[this.getAge(state)];
     }
 
-    @Override
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (state.get(AGE) == MAX_AGE && world.getBlockState(pos.down(2)).isIn(BlockTags.SOUL_FIRE_BASE_BLOCKS)){
-            world.setBlockState(pos, MBlocks.DRIED_MELP.getDefaultState(), 2);
-        }
-        else{
-            super.randomTick(state, world, pos, random);
-        }
-    }
 
     @Override
     protected IntProperty getAgeProperty() {
