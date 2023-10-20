@@ -17,5 +17,7 @@ public class MelpLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MBlocks.MELP, "Melp");
         translationBuilder.add(MBlocks.MELP_NECK, "Melp");
         translationBuilder.add(MBlocks.DRIED_MELP, "Dried Melp");
+        translationBuilder.add(MBlocks.POTTED_DRIED_MELP, "Potted Dried Melp");
+        translationBuilder.add(MBlocks.POTTED_MELP, "Potted Melp");
     }
 }

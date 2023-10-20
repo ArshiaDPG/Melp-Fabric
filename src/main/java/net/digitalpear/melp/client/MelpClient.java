@@ -12,6 +12,6 @@ public class MelpClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
-                MBlocks.MELP, MBlocks.MELP_NECK, MBlocks.MELP_CROP, MBlocks.DRIED_MELP, MBlocks.POTTED_DRIED_MELP);
+                MBlocks.MELP, MBlocks.MELP_NECK, MBlocks.MELP_CROP, MBlocks.DRIED_MELP, MBlocks.POTTED_DRIED_MELP, MBlocks.POTTED_MELP);
     }
 }

@@ -5,17 +5,13 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "melp:melp_neck",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "flowering": "true"
-          }
+          "condition": "minecraft:survives_explosion"
         }
       ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "melp:melp_seed"
+          "name": "melp:melp"
         }
       ],
       "rolls": 1.0

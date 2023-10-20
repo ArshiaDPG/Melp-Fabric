@@ -28,15 +28,12 @@ public class MelpBlockLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
 
         addDrop(MBlocks.MELP);
-
-        addDrop(MBlocks.MELP_NECK, LootTable.builder().pool(LootPool.builder().with(ItemEntry.builder(MItems.MELP_SEED))
-                .conditionally(BlockStatePropertyLootCondition.builder(MBlocks.MELP_NECK)
-                        .properties(StatePredicate.Builder.create().exactMatch(MelpNeckBlock.FLOWERING, true))).build()));
+        addDrop(MBlocks.MELP_NECK, MBlocks.MELP);
 
         addDrop(MBlocks.MELP_CROP, MItems.MELP_SEED);
+        addDrop(MBlocks.POTTED_MELP, pottedPlantDrops(MItems.MELP_SEED));
 
         addDrop(MBlocks.DRIED_MELP);
-
         addDrop(MBlocks.POTTED_DRIED_MELP, pottedPlantDrops(MBlocks.DRIED_MELP));
     }
 }

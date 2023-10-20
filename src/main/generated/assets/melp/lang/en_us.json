@@ -3,5 +3,7 @@
   "block.melp.melp": "Melp",
   "block.melp.melp_crop": "Melp Crop",
   "block.melp.melp_neck": "Melp",
+  "block.melp.potted_dried_melp": "Potted Dried Melp",
+  "block.melp.potted_melp": "Potted Melp",
   "item.melp.melp_seed": "Melp Seed"
 }
